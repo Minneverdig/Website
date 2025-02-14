@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .map-container {
+      height: 400px;
+      width: 100%;
+    }
+    .property-links {
+      padding: 1rem;
+      text-align: center;
+    }
+    .property-links a {
+      display: block;
+      margin: 0.5rem 0;
+      text-decoration: none;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Welcome to Our Real Estate Listings</h1>
+  </header>
+  
+  <div id="map" class="map-container"></div>
+  
+  <section class="property-links">
+    <h2>Featured Properties</h2>
+    <a href="/property1.html">Property 1</a>
+    <a href="/property2.html">Property 2</a>
+    <a href="/property3.html">Property 3</a>
+  </section>
+
+  <script>
+    function initMap() {
+      const center = { lat: 37.7749, lng: -122.4194 }; // Example: San Francisco
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: center,
+      });
+    }
+  </script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>
